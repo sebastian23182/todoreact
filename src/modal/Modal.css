@@ -1,0 +1,109 @@
+.ModalBackground {
+  background: rgba(35, 31, 35, 0.5);
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 2;
+}
+
+.FormTodo {
+  background-color: rgb(250, 250, 250);
+  color: white;
+  width: 90%;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  height: 270px;
+  animation-name: OpenModal;
+  animation-duration: 0.2s;
+  transform: translate(0%, 0%);
+  position: fixed;
+}
+
+.FormTitle {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(46, 39, 46);
+  background-color: white;
+  margin-bottom: 26px;
+}
+
+.FormText {
+  background-color: white;
+  border-radius: 2px;
+  border: 1px solid #202329; 
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  padding: 12px;
+  height: 96px;
+  width: calc(100% - 69px);
+}
+
+.FormText:focus {
+  outline-color: rgb(247, 207, 133);
+}
+
+.FormText::placeholder {
+  color: #A5A5A5;
+  font-weight: 400;
+}
+
+.Form-ButtonContainer {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  background-color: rgb(250, 250, 250);
+}
+
+.FormButton {
+  display: inline-block;
+  font-size: 20px;
+  color: #202329;
+  font-weight: 400;
+  width: 120px;
+  height: 38px;
+  border: none;
+  border-radius: 5px;
+}
+
+.FormButton--cancel {
+  background-color: rgb(250, 250, 250);
+  transition: 0.5s ease;
+}
+
+.FormButton--cancel:hover {
+  scale: 1.1;
+  background-color: rgb(230, 230, 230);
+}
+
+.FormButton--add {
+  /*background: #92d5f3;*/
+  /*box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);*/
+  background-color: rgb(245, 222, 179);
+  box-shadow: 0px 5px 25px rgba(245, 222, 179, 0.5);
+  transition: 0.5s ease;
+}
+
+.FormButton--add:hover {
+  scale: 1.1;
+  background-color: rgb(245, 215, 159);
+}
+
+@keyframes OpenModal {
+  0% {transform: translate(0%, -10%);}
+  100% {transform: translate(0%, 0%);}
+}
+
