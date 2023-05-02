@@ -66,6 +66,7 @@
 }
 
 .Todo-Item {
+  word-break: break-word;
   border-radius: 25px;
   background-color: rgb(39, 46, 60);
   position: relative;
